@@ -1,4 +1,7 @@
-import br.com.dio.desafio.dominio.*;
+import br.com.dio.desafio.dominio.Bootcamp;
+import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
+import br.com.dio.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
 
@@ -30,32 +33,31 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
+
         Dev devNicolas = new Dev();
         devNicolas.setNome("Nicolas");
         devNicolas.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Nicolas:" + devNicolas.getConteudosInscritos());
-
         devNicolas.progredir();
         devNicolas.progredir();
         System.out.println("-");
         System.out.println("Conteúdos Inscritos Nicolas:" + devNicolas.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Nicolas:" + devNicolas.getConteudosConcluidos());
+        System.out.println("XP:" + devNicolas.calcularTotalXp());
 
-        System.out.println("------");
-        System.out.println("XP: " + devNicolas.calcularTotalXp());
+        System.out.println("-------");
 
         Dev devRodrigo = new Dev();
         devRodrigo.setNome("Rodrigo");
         devRodrigo.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Rodrigo:" + devRodrigo.getConteudosInscritos());
-        devNicolas.progredir();
-        devNicolas.progredir();
+        devRodrigo.progredir();
+        devRodrigo.progredir();
         devRodrigo.progredir();
         System.out.println("-");
-        System.out.println("XP: " + devRodrigo.calcularTotalXp());
-
-        System.out.println("Conteúdos Inscritos Rodrigo:" + devNicolas.getConteudosInscritos());
-        System.out.println("Conteúdos Concluídos Rodrigo:" + devRodrigo.getConteudosConcluidos());
+        System.out.println("Conteúdos Inscritos Rodrigo:" + devRodrigo.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Rodrigo:" + devRodrigo.getConteudosConcluidos());
+        System.out.println("XP:" + devRodrigo.calcularTotalXp());
 
     }
 }
